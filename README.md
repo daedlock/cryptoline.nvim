@@ -25,11 +25,6 @@ The plugin exposes `btc_price` and `eth_price` global functions. You can use the
 local cryptoline = require "cryptoline"
 
 require('lualine').setup({
-    options = {
-        -- theme = 'nord',
-        theme = 'catppuccin',
-        icons_enabled = true,
-    },
     sections = {
         lualine_c = {
             'filename', 'lsp_progress'
