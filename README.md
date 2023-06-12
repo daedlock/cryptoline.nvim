@@ -10,9 +10,6 @@
 
 <br/>
 
-> **Note** 
-> cryptoline.nvim only supports lualine right now. In the future, there will be integration with all popular status bar plugins for neovim. This is a personal project that I developed for myself and I wanted it to make it available to everyone! 
-
 
 # Installation
 ## Packer
@@ -20,15 +17,38 @@
 use 'daedlock/cryptoline.vim'
 ```
 
+# Configuration
+## Lualine
 
-<!-- # Configuration (Optional) -->
-<!-- By default, the plugin will add BTC, ETH tickers to `section_y` in lualine (refer to screenshot). If you want to customize this behavior and include it in a different section. You can do -->
-<!--  -->
-<!-- ``` -->
-<!-- local cryptoline = require("cryptoline") -->
-<!--  -->
-<!-- cryptoline.setup({ -->
-<!--     lua_line -->
-<!-- }) -->
-<!-- ``` -->
+The plugin exposes `btc_price` and `eth_price` global functions. You can use them in your lualine configuration as the below example
+```lua
+local cryptoline = require "cryptoline"
 
+require('lualine').setup({
+    options = {
+        -- theme = 'nord',
+        theme = 'catppuccin',
+        icons_enabled = true,
+    },
+    sections = {
+        lualine_c = {
+            'filename', 'lsp_progress'
+        },
+        lualine_x = {
+            {
+                crypto_ticker.btc_price,
+                color = { bg = '#ffb86c', fg = '#4b361f', gui = 'bold' }
+            },
+            {
+                crypto_ticker.eth_price,
+                color = { bg = '#8be9fd', fg = '#365b63', gui = 'bold' }
+            },
+            {
+                'filetype'
+            }
+
+        }
+    }
+})
+
+```
