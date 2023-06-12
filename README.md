@@ -2,9 +2,8 @@
 <p align="center">
 🚀 Neovim plugin to show real time crypto price right into your lualine 🚀
 
-<br/>
-<img src="assets/screenshot.png"/>
 </p>
+<img src="assets/preview.png"/>
 
 
 
