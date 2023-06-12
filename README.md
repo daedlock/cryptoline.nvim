@@ -1,9 +1,8 @@
 <h1 align="center">cryptoline.nvim</h1>
 <p align="center">
 🚀 Neovim plugin to show real time crypto price right into your lualine 🚀
-
+<img src="assets/screen3.png"/>
 </p>
-<img src="assets/screen2.png"/>
 
 
 
