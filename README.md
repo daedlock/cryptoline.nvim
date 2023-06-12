@@ -1,10 +1,18 @@
 <h1 align="center">cryptoline.nvim</h1>
 <p align="center">
-🚀 Show real time crypto price right into your lualine 🚀
+🚀 Neovim plugin to show real time crypto price right into your lualine 🚀
 
 
 </p>
+
+
 <img src="assets/screenshot.png"/>
+
+<br/>
+<br/>
+
+> **Note** 
+> cryptoline.nvim only supports lualine right now. In the future, there will be integration with all popular status bar plugins for neovim. This is a personal project that I developed for myself and I wanted it to make it available to everyone! 
 
 
 # Installation
